@@ -1,17 +1,16 @@
-import React , {useState} from 'react';
+// Selection.js
+import React, { useState } from 'react';
 
+const Selection = ({ applyColor, 'data-testid': dataTestId }) => {
+  const [selectionStyle, updateSelectionStyle] = useState({});  
 
-const Selection=({applyColor})=>{
+  console.log(selectionStyle);
 
-const [selectionStyle,updateSelectionStyle]=useState({});  
-
-
-console.log(selectionStyle);
-    return (
-      <div className='fix-box' style={selectionStyle} onClick={()=>applyColor(updateSelectionStyle)}>
-         <h1>Selection</h1>
-      </div>
-    )
+  return (
+    <div className='fix-box' style={selectionStyle} onClick={() => applyColor(updateSelectionStyle)} data-testid={dataTestId}>
+      <h1>Selection</h1>
+    </div>
+  );
 }
 
 export default Selection;
